@@ -44,13 +44,25 @@ function routesMaker(pathsplit: string[]) {
 }
 
 class AppLayout extends Component<Props> {
+  state = {
+    collapsed: false,
+  };
+
+  onCollapse = (collapsed: boolean) => {
+    console.log(collapsed);
+    this.setState({ collapsed });
+  };
+
   render() {
     const pathname = this.props.router.pathname;
     const pathsplit: string[] = pathname.split('/');
     const routes = routesMaker(pathsplit);
     return (
       <Layout style={{ minHeight: '100vh' }}>
-        <Sider>
+        <Sider
+          collapsible collapsed={this.state.collapsed}
+          onCollapse={this.onCollapse}
+        >
           <Link href="/menu1">
             <a><div className="App-logo" /></a>
           </Link>
