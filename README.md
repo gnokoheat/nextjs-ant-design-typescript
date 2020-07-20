@@ -1,5 +1,5 @@
 # nextjs-ant-design-typescript
-![GitHub](https://img.shields.io/github/license/gnokoheat/nextjs-ant-design-typescript) ![GitHub top language](https://img.shields.io/github/languages/top/gnokoheat/nextjs-ant-design-typescript) ![GitHub last commit](https://img.shields.io/github/last-commit/gnokoheat/nextjs-ant-design-typescript)
+![GitHub](https://img.shields.io/github/license/gnokoheat/nextjs-ant-design-typescript) ![GitHub top language](https://img.shields.io/github/languages/top/gnokoheat/nextjs-ant-design-typescript) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/gnokoheat/nextjs-ant-design-typescript) ![GitHub last commit](https://img.shields.io/github/last-commit/gnokoheat/nextjs-ant-design-typescript)
 
 Next.js + Ant design + Typescript
 
