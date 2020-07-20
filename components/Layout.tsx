@@ -49,7 +49,6 @@ class AppLayout extends Component<Props> {
   };
 
   onCollapse = (collapsed: boolean) => {
-    console.log(collapsed);
     this.setState({ collapsed });
   };
 
