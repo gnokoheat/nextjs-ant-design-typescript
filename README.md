@@ -8,14 +8,17 @@ Next.js + Ant design + Typescript
 - Including simple structure & layout
 
 ## Usage
-
-- Dev
-``` bash
-yarn dev
+- Install dependencies
+```
+yarn install
 ```
 
-- Production
+- Run command
 ``` bash
+# Dev
+yarn dev
+
+# Production
 yarn build
 yarn start
 ```
