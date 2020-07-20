@@ -87,9 +87,16 @@ class AppLayout extends Component<Props> {
             </SubMenu>
           </Menu>
         </Sider>
-        <Layout style={{ padding: '0 24px 24px' }}>
-          <Content>
-            <Breadcrumb style={{ margin: '16px 0' }} itemRender={itemRender} routes={routes} />
+        <Layout style={{ padding: '0 16px 16px' }}>
+          <Breadcrumb style={{ margin: '16px 0' }} itemRender={itemRender} routes={routes} />
+          <Content
+            className="site-layout-background"
+            style={{
+              padding: 16,
+              minHeight: 280,
+              backgroundColor: '#ffffff',
+            }}
+          >
             {this.props.children}
           </Content>
         </Layout>
