@@ -69,6 +69,7 @@ class AppLayout extends Component<Props> {
             theme="dark"
             defaultSelectedKeys={['/menu1']}
             selectedKeys={[pathsplit.pop()]}
+            defaultOpenKeys={[pathsplit[1]]}
             mode="inline">
             <Item key="menu1" icon={<DesktopOutlined />}>
               <Link href="/menu1"><a>Menu 1</a></Link>

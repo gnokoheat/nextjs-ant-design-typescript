@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-      </div>
-    )
-  }
+export default function App() {
+  return (
+    <div></div>
+  )
+}
+
+export async function getServerSideProps({ req }) {
+  const headers = req ? req.headers : {};
+  return { props: { headers } }
 }
