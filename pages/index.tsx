@@ -1,15 +1,21 @@
-import { Component } from "react";
-import Router from "next/router";
+import { useRouter } from 'next/router';
 
-const redirectTo = "/menu1";
+const redirectTo = '/menu1';
 
-export default class RootPage extends Component {
-  static async getInitialProps(ctx: any) {
-    if (ctx && ctx.req) {
-      ctx.res.writeHead(302, { Location: redirectTo })
-      ctx.res.end()
-    } else {
-      return Router.push(redirectTo)
-    }
+const Index = () => {
+  if (typeof window !== 'undefined') {
+    const router = useRouter();
+    router.push(redirectTo);
   }
-}
+  return <></>;
+};
+
+Index.getInitialProps = async ({ ctx }) => {
+  if (ctx && ctx.req) {
+    ctx.res.statusCode = 302;
+    ctx.res.setHeader('Location', redirectTo);
+  }
+  return { props: '' };
+};
+
+export default Index;
