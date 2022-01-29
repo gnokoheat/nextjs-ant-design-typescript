@@ -2,6 +2,7 @@ const withPlugins = require('next-compose-plugins');
 const withCss = require('@zeit/next-css');
 
 const nextConfig = {
+  webpack5: false,
   webpack: (config, { isServer }) => {
     if (isServer) {
       const antStyles = /antd\/.*?\/style.*?/;
