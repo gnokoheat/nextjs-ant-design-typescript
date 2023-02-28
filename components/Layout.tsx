@@ -10,8 +10,6 @@ import {
   SettingOutlined,
 } from '@ant-design/icons';
 
-import './Layout.css';
-
 const { SubMenu, Item } = Menu;
 const { Sider, Content } = Layout;
 
