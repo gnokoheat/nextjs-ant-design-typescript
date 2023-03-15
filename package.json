@@ -26,6 +26,6 @@
     "@types/react": "^16.9.36",
     "babel-loader": "^8.2.2",
     "typescript": "4.3.2",
-    "webpack": "5.75.0"
+    "webpack": "5.76.0"
   }
 }
