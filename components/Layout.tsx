@@ -1,13 +1,13 @@
-import React, { useState, FunctionComponent } from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import Link from 'next/link';
-import { withRouter, NextRouter } from 'next/router';
+import { Breadcrumb, Layout, Menu } from 'antd';
 import { WithRouterProps } from 'next/dist/client/with-router';
+import Link from 'next/link';
+import { NextRouter, withRouter } from 'next/router';
+import React, { useState } from 'react';
 
 import {
-  DesktopOutlined,
   DashboardOutlined,
-  SettingOutlined,
+  DesktopOutlined,
+  SettingOutlined
 } from '@ant-design/icons';
 
 const { SubMenu, Item } = Menu;
@@ -50,7 +50,7 @@ function routesMaker(pathsplit: string[]) {
 }
 
 const AppLayout = (props: React.PropsWithChildren<Props>) => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const onChangeIsCollapsed = (isCollapsed: boolean) => {
     setIsCollapsed(isCollapsed);
