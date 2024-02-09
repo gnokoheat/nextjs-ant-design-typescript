@@ -50,7 +50,7 @@ function routesMaker(pathsplit: string[]) {
 }
 
 const AppLayout = (props: React.PropsWithChildren<Props>) => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const onChangeIsCollapsed = (isCollapsed: boolean) => {
     setIsCollapsed(isCollapsed);
