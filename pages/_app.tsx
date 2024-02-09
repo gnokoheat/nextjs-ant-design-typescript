@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AppLayout>
       <Head>
-        <title>NextJs Antdesign Typescript</title>
+        <title>NextJs AntDesign Typescript</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Component {...pageProps} />

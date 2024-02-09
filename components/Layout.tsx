@@ -1,13 +1,13 @@
-import React, { useState, FunctionComponent } from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
-import Link from 'next/link';
-import { withRouter, NextRouter } from 'next/router';
+import { Breadcrumb, Layout, Menu } from 'antd';
 import { WithRouterProps } from 'next/dist/client/with-router';
+import Link from 'next/link';
+import { NextRouter, withRouter } from 'next/router';
+import React, { useState } from 'react';
 
 import {
-  DesktopOutlined,
   DashboardOutlined,
-  SettingOutlined,
+  DesktopOutlined,
+  SettingOutlined
 } from '@ant-design/icons';
 
 const { SubMenu, Item } = Menu;
@@ -25,7 +25,7 @@ interface Props extends WithRouterProps {
 function itemRender(route: Router) {
   return route.path === 'index' ? (
     <Link href={'/'}>
-      <a>{route.breadcrumbName}</a>
+      {route.breadcrumbName}
     </Link>
   ) : (
     <span>{route.breadcrumbName}</span>
@@ -68,9 +68,7 @@ const AppLayout = (props: React.PropsWithChildren<Props>) => {
         onCollapse={onChangeIsCollapsed}
       >
         <Link href="/menu1">
-          <a>
-            <div className="App-logo" />
-          </a>
+          <div className="App-logo" />
         </Link>
         <Menu
           theme="dark"
@@ -81,23 +79,23 @@ const AppLayout = (props: React.PropsWithChildren<Props>) => {
         >
           <Item key="menu1" icon={<DesktopOutlined />}>
             <Link href="/menu1">
-              <a>Menu 1</a>
+              Menu 1
             </Link>
           </Item>
           <Item key="menu2" icon={<DashboardOutlined />}>
             <Link href="/menu2">
-              <a>Menu 2</a>
+              Menu 2
             </Link>
           </Item>
           <SubMenu key="menu3" icon={<SettingOutlined />} title="Menu 3">
             <Item key="submenu1">
               <Link href="/menu3/submenu1">
-                <a>Submenu 1</a>
+                Submenu 1
               </Link>
             </Item>
             <Item key="submenu2">
               <Link href="/menu3/submenu2">
-                <a>Submenu 2</a>
+                Submenu 2
               </Link>
             </Item>
           </SubMenu>
